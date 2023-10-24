@@ -1,6 +1,6 @@
 ---
 name: bake-ansible-images-v1
-'on': push
+'on': workflow_call
 jobs:
   prepare-matrix:
     runs-on: ubuntu-latest
