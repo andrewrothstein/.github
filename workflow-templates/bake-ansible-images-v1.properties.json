@@ -1,0 +1,7 @@
+{
+    "name": "bake-ansible-images-v1",
+    "description": "docker buildx bake ansible images across a platform matrix",
+    "filePatterns": [
+        "platform-matrix-v1.json"
+    ]
+}
