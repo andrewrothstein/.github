@@ -2,12 +2,18 @@
 name: bake-ansible-images-v1
 'on': workflow_call
 jobs:
+  ansible-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ansible-lint
+        uses: pipeline-components/ansible-lint@v0.22.0
   prepare-matrix:
     runs-on: ubuntu-latest
     outputs:
       dist: ${{ steps.read-matrix.outputs.dist }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: read platform-matrix-v1.json
         id: read-matrix
         run: echo "dist=$(jq -cr '@json' < platform-matrix-v1.json)" >> $GITHUB_OUTPUT
