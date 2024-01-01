@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: ansible-lint
-        uses: pipeline-components/ansible-lint@v0.22.0
+        uses: ansible/ansible-lint@v6
   prepare-matrix:
     runs-on: ubuntu-latest
     outputs:
