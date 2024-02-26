@@ -45,6 +45,7 @@ jobs:
           severity: 'CRITICAL,HIGH'
           format: sarif
           output: trivy-results.sarif
+          timeout: '15m0s'
       - uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
