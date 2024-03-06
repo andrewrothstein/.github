@@ -39,7 +39,7 @@ jobs:
           pull: true
           push: true
           source: https://github.com/andrewrothstein/bake-ansible-images-v1.git#develop
-      - uses: aquasecurity/trivy-action@0.12.0
+      - uses: aquasecurity/trivy-action@0.18.0
         with:
           image-ref: "ghcr.io/${{ github.repository }}:0.0.0-${{ matrix.dist.OS }}.${{ matrix.dist.OS_VER }}"
           severity: 'CRITICAL,HIGH'
