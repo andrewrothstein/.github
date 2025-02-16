@@ -29,7 +29,7 @@ jobs:
           registry: ghcr.io
           username: "${{ github.actor }}"
           password: "${{ github.token }}"
-      - uses: docker/bake-action@v5
+      - uses: docker/bake-action@v6
         env:
           UPSTREAM_TAG: "0.0.0-${{ matrix.dist.OS }}.${{ matrix.dist.OS_VER }}"
           TARGET_SLUG: "${{ github.repository }}"
